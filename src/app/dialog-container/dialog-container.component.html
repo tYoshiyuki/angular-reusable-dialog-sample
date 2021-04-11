@@ -1,0 +1,21 @@
+<h3>This is dialog container.</h3>
+
+<app-dialog-content-frame>
+  <mat-dialog-content>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <mat-form-field>
+        <mat-label>User Name</mat-label>
+        <input
+          matInput
+          placeholder="Ex. Ichiro, Jiro,"
+          formControlName="name"
+        />
+      </mat-form-field>
+    </form>
+  </mat-dialog-content>
+</app-dialog-content-frame>
+
+<app-dialog-action-frame>
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button type="submit" mat-button>OK</button>
+</app-dialog-action-frame>
