@@ -19,9 +19,7 @@ export class AppComponent {
   onOpenClick() {
     const dialogRef = this.dialog.open(DialogContainerComponent);
     dialogRef.afterClosed().subscribe((result: DialogResult<string>) => {
-      if (result) {
-        this.result = result;
-      }
+      this.result = result ? result : undefined;
     });
   }
 }
